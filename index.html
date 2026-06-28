@@ -197,17 +197,14 @@
             margin: 0 auto;
         }
 
-        /* shared ivory-section style: image + consistent overlay */
+        /* ===== ILLUSTRATION BACKGROUND WRAPPER ===== */
+        .content-bg {
+            background: url('body_2.png') center top / cover no-repeat var(--ivory);
+        }
+
         .ivory-wrap,
         .events-wrap,
-        .rsvp-wrap,
-        .ornament {
-            background-image:
-                linear-gradient(rgba(253,245,228,0.58), rgba(253,245,228,0.58)),
-                url('body_43.png');
-            background-size: cover;
-            background-position: center;
-        }
+        .rsvp-wrap { background: transparent; }
 
         /* ===== EVENTS ===== */
 
@@ -219,8 +216,8 @@
         }
 
         .event-card {
-            background: white;
-            border: 1px solid rgba(201,164,50,0.25);
+            background: linear-gradient(145deg, #4A1020, var(--burgundy));
+            border: 1px solid rgba(201,164,50,0.45);
             border-radius: 6px;
             padding: 2.5rem 1.75rem 2rem;
             position: relative;
@@ -233,12 +230,12 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--burgundy), var(--gold), var(--burgundy));
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
         }
 
         .event-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(107,28,50,0.13);
+            box-shadow: 0 20px 60px rgba(74,16,32,0.45);
         }
 
         .event-icon { font-size: 2.2rem; margin-bottom: 1.1rem; }
@@ -247,7 +244,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.75rem;
             font-weight: 400;
-            color: var(--burgundy);
+            color: var(--gold);
             margin-bottom: 1.25rem;
         }
 
@@ -270,7 +267,7 @@
         .event-row-text {
             font-size: 0.85rem;
             line-height: 1.6;
-            color: var(--text-light);
+            color: rgba(253,245,228,0.75);
         }
 
         .event-row-text strong {
@@ -278,7 +275,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.95rem;
             font-weight: 600;
-            color: var(--text);
+            color: rgba(253,245,228,0.95);
         }
 
         /* ===== COUNTDOWN ===== */
@@ -617,7 +614,9 @@
     </div>
 </section>
 
-<!-- ═══════════ INTRO ═══════════ -->
+<!-- ═══════════ IVORY CONTENT (one background wrapper) ═══════════ -->
+<div class="content-bg">
+
 <div class="ornament">✦ &nbsp; ❈ &nbsp; ✦</div>
 
 <div class="ivory-wrap">
@@ -655,7 +654,7 @@
                         <span class="event-row-icon">📍</span>
                         <div class="event-row-text">
                             <strong>Venue</strong>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Chinna+Bazaar+Rushikonda+Andhra+Pradesh+530045+India" target="_blank" rel="noopener" style="color:var(--burgundy);text-decoration:underline;text-underline-offset:3px;">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chinna+Bazaar+Rushikonda+Andhra+Pradesh+530045+India" target="_blank" rel="noopener" style="color:var(--gold-light);text-decoration:underline;text-underline-offset:3px;">
                                 Chinna Bazaar, Rushikonda<br>Andhra Pradesh 530045, India
                             </a>
                         </div>
@@ -666,6 +665,8 @@
         </div>
     </div>
 </div>
+
+</div><!-- end .content-bg -->
 
 <!-- ═══════════ COUNTDOWN ═══════════ -->
 <div class="countdown-wrap fade-up">
@@ -697,6 +698,7 @@
 </div>
 
 <!-- ═══════════ RSVP ═══════════ -->
+<div class="content-bg">
 <div class="rsvp-wrap">
     <div class="section fade-up">
         <p class="section-label">Kindly respond</p>
@@ -751,6 +753,7 @@
         </form>
     </div>
 </div>
+</div><!-- end .content-bg -->
 
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer class="site-footer">
