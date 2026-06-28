@@ -30,14 +30,11 @@
             overflow-x: hidden;
         }
 
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: url('body_bg.png') center / cover no-repeat;
-            opacity: 0.1;
-            z-index: -1;
-            pointer-events: none;
+        body {
+            background-image: url('body_43.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* ===== HERO ===== */
@@ -212,9 +209,14 @@
             margin: 0 auto;
         }
 
+        /* ===== IVORY WRAP (intro) ===== */
+        .ivory-wrap {
+            background: rgba(253,245,228,0.72);
+        }
+
         /* ===== EVENTS ===== */
         .events-wrap {
-            background: linear-gradient(180deg, var(--ivory) 0%, #ede0c4 50%, var(--ivory) 100%);
+            background: rgba(245,230,204,0.75);
         }
 
         .events-grid {
@@ -412,7 +414,7 @@
 
         /* ===== RSVP ===== */
         .rsvp-wrap {
-            background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+            background: rgba(253,245,228,0.72);
         }
 
         .rsvp-form {
@@ -629,12 +631,14 @@
 <!-- ═══════════ INTRO ═══════════ -->
 <div class="ornament">✦ &nbsp; ❈ &nbsp; ✦</div>
 
-<div class="section fade-up">
-    <p class="section-label">With love &amp; joy</p>
-    <h2 class="section-title">A New Beginning</h2>
-    <p class="section-body">
-        Two hearts, one journey. We are beyond delighted to invite you to celebrate the beginning of our lifelong story together. Your presence — and your blessings — would mean the world to us as we start this beautiful new chapter.
-    </p>
+<div class="ivory-wrap">
+    <div class="section fade-up">
+        <p class="section-label">With love &amp; joy</p>
+        <h2 class="section-title">A New Beginning</h2>
+        <p class="section-body">
+            Two hearts, one journey. We are beyond delighted to invite you to celebrate the beginning of our lifelong story together. Your presence — and your blessings — would mean the world to us as we start this beautiful new chapter.
+        </p>
+    </div>
 </div>
 
 <div class="ornament">✦ &nbsp; ❈ &nbsp; ✦</div>
