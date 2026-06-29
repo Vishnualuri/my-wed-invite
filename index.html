@@ -795,6 +795,18 @@
     tick();
     setInterval(tick, 1000);
 
+    // ── MATCH IVORY SECTION HEIGHTS ────────────────────────────
+    function matchIvoryHeights() {
+        const sections = document.querySelectorAll('.content-bg');
+        if (sections.length >= 2) {
+            sections[1].style.minHeight = '';
+            const h = sections[0].offsetHeight;
+            sections[1].style.minHeight = h + 'px';
+        }
+    }
+    matchIvoryHeights();
+    window.addEventListener('resize', matchIvoryHeights);
+
     // ── SCROLL ANIMATIONS ──────────────────────────────────────
     const observer = new IntersectionObserver(
         (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
