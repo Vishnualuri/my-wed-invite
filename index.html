@@ -200,22 +200,18 @@
         /* ===== CORNER IMAGE BACKGROUND WRAPPER ===== */
         .content-bg {
             background-image:
-                linear-gradient(rgba(253,245,228,0.22), rgba(253,245,228,0.22)),
+                linear-gradient(rgba(253,245,228,0.42), rgba(253,245,228,0.42)),
                 url('body _corner.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-color: var(--ivory);
+            min-height: 85vh;
         }
 
         .ivory-wrap,
+        .events-wrap,
         .rsvp-wrap { background: transparent; }
-
-        .events-wrap { background: rgba(253,245,228,0.45); }
-
-        .content-bg.rsvp-bg {
-            background-size: 100% 100%;
-        }
 
         /* ===== EVENTS ===== */
 
@@ -709,7 +705,7 @@
 </div>
 
 <!-- ═══════════ RSVP ═══════════ -->
-<div class="content-bg rsvp-bg">
+<div class="content-bg">
 <div class="rsvp-wrap">
     <div class="section fade-up">
         <p class="section-label">Kindly respond</p>
