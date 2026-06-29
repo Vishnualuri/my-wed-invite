@@ -197,13 +197,15 @@
             margin: 0 auto;
         }
 
-        /* ===== CORNER DECORATION WRAPPER ===== */
+        /* ===== CORNER IMAGE BACKGROUND WRAPPER ===== */
         .content-bg {
-            background-color: var(--ivory);
-            background-image: url('body_2.png'), url('body_2.png');
-            background-position: top left, top right;
-            background-size: clamp(100px, 18vw, 240px) auto, clamp(100px, 18vw, 240px) auto;
+            background-image:
+                linear-gradient(rgba(253,245,228,0.22), rgba(253,245,228,0.22)),
+                url('body _corner.png');
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
+            background-color: var(--ivory);
         }
 
         .ivory-wrap,
