@@ -202,8 +202,7 @@
             background-image:
                 linear-gradient(rgba(253,245,228,0.22), rgba(253,245,228,0.22)),
                 url('body _corner.png');
-            background-size: cover;
-            background-position: center;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
             background-color: var(--ivory);
         }
@@ -222,13 +221,14 @@
         }
 
         .event-card {
-            background: linear-gradient(145deg, #4A1020, var(--burgundy));
-            border: 1px solid rgba(201,164,50,0.45);
+            background: rgba(255, 250, 238, 0.88);
+            border: 1.5px solid var(--gold);
             border-radius: 6px;
             padding: 2.5rem 1.75rem 2rem;
             position: relative;
             overflow: hidden;
             transition: transform 0.35s ease, box-shadow 0.35s ease;
+            box-shadow: 0 4px 24px rgba(107,28,50,0.1);
         }
 
         .event-card::before {
@@ -240,8 +240,8 @@
         }
 
         .event-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 60px rgba(74,16,32,0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(107,28,50,0.18);
         }
 
         .event-icon { font-size: 2.2rem; margin-bottom: 1.1rem; }
@@ -250,7 +250,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.75rem;
             font-weight: 400;
-            color: var(--gold);
+            color: var(--burgundy);
             margin-bottom: 1.25rem;
         }
 
@@ -273,7 +273,7 @@
         .event-row-text {
             font-size: 0.85rem;
             line-height: 1.6;
-            color: rgba(253,245,228,0.75);
+            color: var(--text-light);
         }
 
         .event-row-text strong {
@@ -281,7 +281,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.95rem;
             font-weight: 600;
-            color: rgba(253,245,228,0.95);
+            color: var(--text);
         }
 
         /* ===== COUNTDOWN ===== */
@@ -660,7 +660,7 @@
                         <span class="event-row-icon">📍</span>
                         <div class="event-row-text">
                             <strong>Venue</strong>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Chinna+Bazaar+Rushikonda+Andhra+Pradesh+530045+India" target="_blank" rel="noopener" style="color:var(--gold-light);text-decoration:underline;text-underline-offset:3px;">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chinna+Bazaar+Rushikonda+Andhra+Pradesh+530045+India" target="_blank" rel="noopener" style="color:var(--burgundy);text-decoration:underline;text-underline-offset:3px;">
                                 Chinna Bazaar, Rushikonda<br>Andhra Pradesh 530045, India
                             </a>
                         </div>
