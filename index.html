@@ -577,6 +577,21 @@
             .cd-sep      { display: none; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .g-item:first-child { grid-column: 1 / -1; grid-row: auto; }
+
+            /* Hero mobile: portrait image positioned at top so couple stays at bottom edge */
+            .hero {
+                background-image: url('body_2.png');
+                background-position: top center;
+            }
+            /* Tighten name spacing */
+            .hero-names { line-height: 0.88; }
+            .hero-amp   { margin: 0.15rem 0; }
+            .hero-rule  { margin: 1rem auto; }
+        }
+
+        /* Desktop: swap to landscape image */
+        @media (min-width: 641px) {
+            .hero { background-image: url('body _corner.png'); }
         }
     </style>
 </head>
