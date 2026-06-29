@@ -33,7 +33,7 @@
         /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(160deg, #4A1020 0%, #6B1C32 40%, #9B2C4A 70%, #6B1C32 100%);
+            background: url('heading_2.png') center / cover no-repeat var(--ivory);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -48,9 +48,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image:
-                radial-gradient(ellipse at 15% 20%, rgba(201,164,50,0.18) 0%, transparent 45%),
-                radial-gradient(ellipse at 85% 80%, rgba(201,164,50,0.18) 0%, transparent 45%);
+            background: radial-gradient(ellipse at center, transparent 30%, rgba(253,245,228,0.35) 100%);
             pointer-events: none;
         }
 
@@ -72,7 +70,7 @@
             font-size: 0.75rem;
             letter-spacing: 0.5em;
             text-transform: uppercase;
-            color: var(--gold-light);
+            color: rgba(107,28,50,0.7);
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeUp 1s 0.3s forwards;
@@ -81,7 +79,7 @@
         .hero-names {
             font-family: 'Great Vibes', cursive;
             font-size: clamp(4.5rem, 13vw, 9rem);
-            color: #fff;
+            color: var(--burgundy);
             line-height: 1;
             opacity: 0;
             animation: fadeUp 1s 0.6s forwards;
@@ -111,7 +109,7 @@
             font-size: clamp(1rem, 3vw, 1.5rem);
             font-weight: 300;
             letter-spacing: 0.25em;
-            color: rgba(253,245,228,0.85);
+            color: var(--burgundy);
             opacity: 0;
             animation: fadeUp 1s 1.2s forwards;
         }
@@ -120,7 +118,7 @@
             font-size: 0.72rem;
             letter-spacing: 0.4em;
             text-transform: uppercase;
-            color: rgba(232,201,107,0.55);
+            color: rgba(107,28,50,0.5);
             margin-top: 0.6rem;
             opacity: 0;
             animation: fadeUp 1s 1.5s forwards;
@@ -143,14 +141,14 @@
             font-size: 0.6rem;
             letter-spacing: 0.35em;
             text-transform: uppercase;
-            color: rgba(232,201,107,0.5);
+            color: rgba(107,28,50,0.45);
         }
 
         .scroll-arrow {
             width: 18px;
             height: 18px;
-            border-right: 1px solid rgba(201,164,50,0.5);
-            border-bottom: 1px solid rgba(201,164,50,0.5);
+            border-right: 1px solid rgba(107,28,50,0.35);
+            border-bottom: 1px solid rgba(107,28,50,0.35);
             transform: rotate(45deg);
             animation: bounce 1.8s 2.5s infinite;
         }
@@ -195,18 +193,6 @@
             color: var(--text-light);
             max-width: 580px;
             margin: 0 auto;
-        }
-
-        /* ===== CORNER IMAGE BACKGROUND WRAPPER ===== */
-        .content-bg {
-            background: url('body _corner.png') center / 100% 100% no-repeat var(--ivory);
-            min-height: 85vh;
-        }
-
-        @media (max-width: 768px) {
-            .content-bg {
-                background: url('body_2.png') center / 100% 100% no-repeat var(--ivory);
-            }
         }
 
         .ivory-wrap,
@@ -287,7 +273,7 @@
 
         /* ===== COUNTDOWN ===== */
         .countdown-wrap {
-            background: linear-gradient(150deg, #4A1020 0%, #6B1C32 50%, #9B2C4A 100%);
+            background: url('body _corner.png') center / cover no-repeat var(--ivory);
             padding: 5.5rem 1.5rem;
             text-align: center;
             position: relative;
@@ -298,7 +284,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(201,164,50,0.08) 0%, transparent 65%);
+            background: rgba(74,16,32,0.78);
         }
 
         .countdown-inner { position: relative; z-index: 1; }
@@ -800,18 +786,6 @@
     }
     tick();
     setInterval(tick, 1000);
-
-    // ── MATCH IVORY SECTION HEIGHTS ────────────────────────────
-    function matchIvoryHeights() {
-        const sections = document.querySelectorAll('.content-bg');
-        if (sections.length >= 2) {
-            sections[1].style.minHeight = '';
-            const h = sections[0].offsetHeight;
-            sections[1].style.minHeight = h + 'px';
-        }
-    }
-    matchIvoryHeights();
-    window.addEventListener('resize', matchIvoryHeights);
 
     // ── SCROLL ANIMATIONS ──────────────────────────────────────
     const observer = new IntersectionObserver(
